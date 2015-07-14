@@ -34,7 +34,7 @@ function proxy(pattern) {
 				method: req.method,
 
 				headers: {
-					'Accept': 'application/vnd.twinfield+json',
+					'Accept': 'application/vnd.twinfield+json;version=latest',
 					'Access-Control-Allow-Origin': '*',
 					"Access-Control-Allow-Headers": 'X-Requested-With, ETag, Accept, Origin, Referer, User-Agent, Content-Type, Authorization',
 					'Access-Control-Allow-Methods': "PUT, GET, POST, DELETE, OPTIONS",
@@ -61,7 +61,7 @@ function proxy(pattern) {
 			res.header('Access-Control-Allow-Credentials', 'true');
 			res.header("Access-Control-Allow-Headers", "X-Requested-With, ETag, Accept, Origin, Referer, User-Agent, Content-Type, Authorization");
 			res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
-			res.header('Content-Type', 'application/vnd.twinfield+json');
+			res.header('Content-Type', 'application/vnd.twinfield+json;version=latest');
 
 			if (response.statusCode == 401){
 				console.log('\n');
